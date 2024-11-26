@@ -90,6 +90,7 @@ header nav ul li:last-of-type a {
 section.hero {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 1024/476;
 }
 
 section.hero img {
@@ -220,11 +221,15 @@ section.best-sellers .product-slider .product {
 
 section.best-sellers .product-slider .product img {
   max-width: 40%;
+  width: 40%;
+  height: 100%;
+  object-fit: contain;
 }
 
 section.best-sellers .product-slider .product .product-picture {
   height: 100%;
   display: flex;
+  aspect-ratio: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -450,6 +455,10 @@ footer .copyright-text {
 
 /* Start of Design for Tablets */
 @media screen and (max-width: 960px) {
+  section.hero {
+    aspect-ratio: 900/721;
+  }
+
   .container {
     max-width: 92%;
   }
@@ -589,6 +598,9 @@ footer .copyright-text {
 
 /* Start of Design for Mobile Phones */
 @media screen and (max-width: 576px) {
+  section.hero {
+    aspect-ratio: 560/560;
+  }
   header .logo {
     font-size: 18px;
   }
