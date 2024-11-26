@@ -1,3 +1,23 @@
+function showLoadingSkeletons() {
+  const container = document.querySelector(".product-slider");
+  const skeletons = Array(4)
+    .fill()
+    .map(
+      () => `
+    <div class="product skeleton">
+      <div class="product-image-skeleton"></div>
+      <div class="product-info-skeleton">
+        <div class="title-skeleton"></div>
+        <div class="price-skeleton"></div>
+      </div>
+    </div>
+  `
+    )
+    .join("");
+
+  container.innerHTML = skeletons;
+}
+
 async function loadProducts() {
   const response = await fetch("https://fakestoreapi.com/products");
   const products = await response.json();
