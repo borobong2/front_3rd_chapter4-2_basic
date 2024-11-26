@@ -84,6 +84,21 @@
       <img class="desktop" src="images/Hero_Desktop.webp" />
       <img class="mobile" src="images/Hero_Mobile.webp" />
       <img class="tablet" src="images/Hero_Tablet.webp" />
+      <picture>
+        <source
+          media="(max-width: 575px)"
+          srcset="images/Hero_Mobile.webp"
+          type="image/webp"
+        />
+
+        <source
+          media="(min-width: 576px) and (max-width: 960px)"
+          srcset="images/Hero_Tablet.webp"
+          type="image/webp"
+        />
+
+        <img src="images/Hero_Desktop.webp" alt="VR 헤드셋 히어로 이미지" />
+      </picture>
 
       <div class="hero-content">
         <div class="container">
